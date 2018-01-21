@@ -2,7 +2,7 @@ This is a simple youtube downloader that uses "https://en.savefrom.net" to downl
 for videos and not for channels or playlists.
 
 Screenhots:
-Screenshots of the app is in the "app/screenshot" folder.
+Screenshots of the app is in the "app/Screenshots" folder.
 
 How to use:
 1) search for a video
