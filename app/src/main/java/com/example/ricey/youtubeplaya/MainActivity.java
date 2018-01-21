@@ -2,6 +2,7 @@ package com.example.ricey.youtubeplaya;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -58,6 +59,7 @@ public class MainActivity extends YouTubeBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         searchButton = findViewById(R.id.searchButton);
         listView = findViewById(R.id.youTubeJsonListView);
         searchText = findViewById(R.id.searchBox);

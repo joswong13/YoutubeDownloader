@@ -6,6 +6,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Environment;
@@ -45,6 +46,7 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube_player);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         Intent intentGetExtra = getIntent();
 
@@ -117,7 +119,6 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity {
         if (externalStorage != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(new String[] {Manifest.permission.WRITE_EXTERNAL_STORAGE},
                     REQUEST_CODE_ASK_PERMISSIONS);
-            return;
         }
     }
 }
